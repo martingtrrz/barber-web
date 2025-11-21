@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 // 1. Importamos useNavigate para el botón de Editar
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from "../config";
 
-const API_CITAS_CLIENTE = "http://localhost:3001/api/citas/cliente";
+const API_CITAS_CLIENTE =  `${API_BASE_URL}/citas/cliente`;
 // 2. Usamos el endpoint de estado que ya existe
-const API_UPDATE_ESTADO = "http://localhost:3001/api/citas/estado"; // (PATCH /:id_cita)
+const API_UPDATE_ESTADO = `${API_BASE_URL}/citas/estado`; // (PATCH /:id_cita)
 
 function Citas() {
     const usuarioGuardado = localStorage.getItem("usuario");

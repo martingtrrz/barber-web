@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { API_BASE_URL } from "../config";
 
 // Ajusta el puerto a donde esté corriendo tu backend
-const API_URL = 'http://localhost:3001/api/personal';
-const API_URL_INACTIVOS = 'http://localhost:3001/api/personal/inactivo';
-const API_URL_REGISTRO = 'http://localhost:3001/api/personal/registro'; 
+const API_URL = `${API_BASE_URL}/personal`;
+const API_URL_INACTIVOS = `${API_BASE_URL}/personal/inactivo`;
+const API_URL_REGISTRO = `${API_BASE_URL}/personal/registro`; 
 
 const Personal = () => {
     const [personal, setPersonal] = useState([]);

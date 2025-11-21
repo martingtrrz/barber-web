@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'; // Importación limpia de hooks
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from "../config";
 
-const API_BASE_URL = "http://localhost:3001/api"; 
 
 function CambiarContraCliente() {
     const navigate = useNavigate();

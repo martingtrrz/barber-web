@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 // 1. Importamos useNavigate
 import { useNavigate } from 'react-router-dom';
-//import './register.css'; // (CSS de ejemplo más abajo)
+import { API_BASE_URL } from "../config";
 
 // URL del endpoint de registro
-const API_URL = "http://localhost:3001/api/register";
+const API_URL = `${API_BASE_URL}/register`;
 
 function Register() {
   // 2. Inicializamos el hook

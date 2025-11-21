@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from "../config";
 
-const API_BASE_URL = "http://localhost:3001/api"; 
 
 // Función auxiliar para obtener el endpoint y la clave de ID
 const getEndpoints = (rol) => {

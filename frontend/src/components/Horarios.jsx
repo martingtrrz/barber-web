@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { API_BASE_URL } from "../config";
+
 
 // Definición del componente principal renombrado a Horarios
 const Horarios = () => {
@@ -12,7 +14,7 @@ const Horarios = () => {
     const [editingData, setEditingData] = useState({}); // Datos temporales de edición
     const [successMessage, setSuccessMessage] = useState(null); // Mensaje de éxito para el usuario
 
-    const API_URL = 'http://localhost:3001/api/horarios';
+    const API_URL = `${API_BASE_URL}/horarios`;
 
     // --- Funciones de Utilidad y Fetching ---
 

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 // 1. Importamos 'useNavigate' también para el nuevo link
 import { useNavigate } from "react-router-dom"; 
-// Nota: Ya no importamos login.css, usamos styles.css global
+import { API_BASE_URL } from "../config";
 
-const API_URL = "http://localhost:3001/api/login";
+const API_URL = `${API_BASE_URL}/login`;  
 
 function Login() {
   const [email, setEmail] = useState("");

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // 1. Importamos useNavigate para el botón de "Volver"
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from "../config";
 
 const RecuperarContra = () => {
     const navigate = useNavigate(); // Hook de navegación
@@ -28,7 +29,7 @@ const RecuperarContra = () => {
         }
         setMensaje({ type: '', text: '' });
         setCargando(true);
-        const apiUrl = 'http://localhost:3001/api/generar-token';
+        const apiUrl = `${API_BASE_URL}/generar-token`;
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',
@@ -67,7 +68,7 @@ const RecuperarContra = () => {
         }
         setMensaje({ type: '', text: '' });
         setCargando(true);
-        const apiUrl = 'http://localhost:3001/api/verificar-token';
+        const apiUrl = `${API_BASE_URL}/verificar-token`;
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',
@@ -104,7 +105,7 @@ const RecuperarContra = () => {
         }
         setMensaje({ type: '', text: '' });
         setCargando(true);
-        const apiUrl = 'http://localhost:3001/api/restablecer-password';
+        const apiUrl = `${API_BASE_URL}/restablecer-password`;
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',

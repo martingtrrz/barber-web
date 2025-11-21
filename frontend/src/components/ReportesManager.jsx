@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { API_BASE_URL } from "../config";
 
-const API_REPORTS_URL = "http://localhost:3001/api/reportes/stats";
-
+const API_REPORTS_URL = `${API_BASE_URL}/reportes/stats`;
 // Componente para tarjeta individual
 function StatCard({ titulo, valor, subtitulo, colorSubtitulo = '#28a745', icono }) {
   return (
