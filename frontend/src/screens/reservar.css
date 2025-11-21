@@ -1,0 +1,105 @@
+.agendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* queda arriba para formulario */
+  min-height: 80vh;
+  padding: 20px;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Títulos */
+.agendar-title {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #222; /* mismo tono que botones oscuros */
+}
+
+.agendar-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Formulario */
+.agendar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Labels */
+.agendar-form label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+  text-align: left;
+}
+
+/* Inputs, selects y textarea */
+.agendar-form input,
+.agendar-form select,
+.agendar-form textarea {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.agendar-form input:focus,
+.agendar-form select:focus,
+.agendar-form textarea:focus {
+  border-color: #222;
+  box-shadow: 0 0 5px rgba(34, 34, 34, 0.3);
+}
+
+/* Textarea */
+.agendar-form textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* Botón */
+.agendar-btn {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.agendar-btn:hover {
+  transform: scale(1.05);
+}
+
+.agendar-btn:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+/* Mensajes de error */
+.agendar-container p[style*="red"] {
+  color: #ff4d4d !important;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .agendar-container {
+    padding: 15px;
+  }
+  
+  .agendar-form {
+    width: 100%;
+  }
+}

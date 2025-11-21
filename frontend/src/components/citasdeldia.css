@@ -1,0 +1,124 @@
+/* components/CitasDelDia.css */
+
+.citas-dia-container {
+  padding: 1rem;
+}
+
+.citas-dia-container h1 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  color: #333;
+}
+
+.citas-filtro {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.citas-filtro label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.citas-filtro input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.citas-filtro button {
+  padding: 8px 15px;
+  margin-left: 10px;
+  font-size: 1rem;
+  background-color: #1a1a1a;
+  color: #d4af37;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.citas-filtro button:hover {
+  background-color: #333;
+}
+
+.citas-filtro button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.citas-error {
+  color: #dc3545;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffe6e6;
+  border: 1px solid #ffb3b3;
+  border-radius: 8px;
+}
+
+.citas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden; /* Para que el radius afecte a la tabla */
+}
+
+.citas-table th,
+.citas-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.citas-table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Colores de fila según estado */
+.citas-table tr.cita-estado-completada {
+  background-color: #e6ffe6; /* Verde claro */
+}
+.citas-table tr.cita-estado-cancelada {
+  background-color: #ffe6e6; /* Rojo claro */
+  text-decoration: line-through;
+}
+
+.estado-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.estado-pendiente { background-color: #ffc107; color: #333; }
+.estado-confirmada { background-color: #007bff; }
+.estado-completada { background-color: #28a745; }
+.estado-cancelada { background-color: #dc3545; }
+
+.citas-acciones .accion-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.citas-acciones .accion-btn:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+.accion-btn.completar { background-color: #28a745; }
+.accion-btn.cancelar { background-color: #dc3545; }
