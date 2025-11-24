@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { API_BASE_URL } from "../config";
 
-const API_CITAS_DIA = `${API_BASE_URL}/citas/dia`;
+const API_CITAS_DIA = `${API_BASE_URL}/citas/personal/citas-del-dia`;
 const API_UPDATE_ESTADO = `${API_BASE_URL}/citas/estado`; // (PATCH /:id_cita)
 
 function CitasDelDia({ usuario }) {
